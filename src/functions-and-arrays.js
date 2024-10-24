@@ -17,8 +17,7 @@ const words = [
 function findLongestWord(words) {
 	if (!words.length) return null;
 
-	const wordLengths = words.map(word => word.length);
-	const maxLength = Math.max(...wordLengths);
+	const maxLength = Math.max(...words.map(word => word.length));
 
 	return words.find(word => word.length === maxLength);
 }
